@@ -17,13 +17,13 @@ macOS 는 서명되지 않은 앱이라 처음 한 번은 Finder 에서 우클�
 - CFW·부트로더: Atmosphère, hekate (VOL- 를 누른 채 부팅하면 hekate 메뉴)
 - 시스모듈: sys-patch, sys-con(유선 서드파티 패드), MissionControl(블루투스로 PS/Xbox 등 패드)
 - 오버레이 메뉴 Ultrahand(ZL+ZR+방향키 아래): EdiZon(치트), ovl-sysmodules(시스모듈 켜기/끄기), sys-patch
-- 앱: nyaa-aio 업데이터, NXThemes Installer KO(홈 메뉴 테마, 한국어판), JKSV(세이브 백업), NX-Activity-Log
+- 앱: nyaa-aio 업데이터, NXThemes Installer KO(홈 메뉴 테마, 한국어판), DBI(설치 관리자, 러시아어판), JKSV(세이브 백업), NX-Activity-Log
 
 ### 한국어
 
-- 한국어: nyaa-aio 업데이터·PC 설치 프로그램, 테마 설치기, Ultrahand 메뉴, EdiZon·ovl-sysmodules 오버레이(nyaa-aio 번역 포함),
+- 한국어: nyaa-aio 업데이터·PC 설치 프로그램, hekate 메뉴(Nyx, 메인 화면), 테마 설치기, Ultrahand 메뉴, EdiZon·ovl-sysmodules 오버레이(nyaa-aio 번역 포함),
   JKSV·NX-Activity-Log·홈브류 메뉴(스위치 언어가 한국어일 때)
-- 영어만 지원: hekate 부팅 메뉴, sys-patch 오버레이, sys-con 앱
+- 영어만 지원: hekate 의 세부 도구 화면, sys-patch 오버레이, sys-con 앱 (DBI 는 러시아어)
 - 예전에 Ultrahand 를 이미 실행했다면 언어가 영어로 저장돼 있을 수 있습니다. Ultrahand 설정 → Language 에서 한국어를 고르세요.
 
 `config/` 아래 설정(sys-con, MissionControl 등)은 업데이트해도 보존됩니다.
