@@ -8,6 +8,10 @@ Nintendo Switch CFW AIO 팩입니다. 구형(Erista), 개선판(Mariko), OLED, L
 2. SD 카드(FAT32 권장) 루트에 압축을 풉니다.
 3. 기종에 맞게 부팅합니다: [docs/models.md](docs/models.md)
 
+PC 설치 프로그램을 쓰면 SD 카드를 고르고 버튼 하나로 최신 팩을 설치할 수 있습니다 (설정·emuMMC 보존).
+릴리스에서 Windows `nyaa-aio-windows-x64.zip`, macOS `nyaa-aio-macos-universal.zip`, Linux `nyaa-aio-linux-x64.tar.gz` 를 받으세요.
+macOS 는 서명되지 않은 앱이라 처음 한 번은 Finder 에서 우클릭 → 열기 를 눌러야 합니다.
+
 ## 구성
 
 - CFW·부트로더: Atmosphère, hekate (VOL- 를 누른 채 부팅하면 hekate 메뉴)
