@@ -16,7 +16,7 @@ macOS 는 서명되지 않은 앱이라 처음 한 번은 Finder 에서 우클�
 
 - CFW·부트로더: Atmosphère, hekate (VOL- 를 누른 채 부팅하면 hekate 메뉴)
 - 시스모듈: sys-patch, sys-con(유선 서드파티 패드), MissionControl(블루투스로 PS/Xbox 등 패드)
-- Tesla 오버레이(L+방향키 아래+R3): Tesla Menu, EdiZon(치트), ovl-sysmodules(시스모듈 켜기/끄기)
+- 오버레이 메뉴 Ultrahand(ZL+ZR+방향키 아래): EdiZon(치트), ovl-sysmodules(시스모듈 켜기/끄기), sys-patch
 - 앱: nyaa-aio 업데이터, JKSV(세이브 백업), NX-Activity-Log
 
 `config/` 아래 설정(sys-con, MissionControl 등)은 업데이트해도 보존됩니다.
