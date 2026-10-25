@@ -11,7 +11,15 @@ SD 구성은 모든 기종이 같습니다. `nyaa-aio.zip`을 FAT32(또는 exFAT
 | Lite | HDH-001 | 모드칩 필요 |
 
 모드칩(Picofly/HWFLY 등)은 SD 루트의 `payload.bin`(hekate)을 자동으로 부팅합니다.
-hekate가 뜨면 **Launch → CFW (emuMMC)** 를 고르세요. sysMMC CFW 사용은 밴 위험이 큽니다.
+
+## 부팅 흐름
+
+1. hekate 부팅 로고(nyaa 스플래시)가 3초 동안 표시됩니다.
+   - 이때 **VOL-**를 누르고 있으면 hekate 메뉴로 들어갑니다.
+   - 아무것도 누르지 않으면 **CFW (auto)**로 자동 부팅합니다. emuMMC가 켜져 있으면 emuMMC로, 없으면 sysMMC로 부팅합니다.
+2. Atmosphère 스플래시가 뜬 뒤 홈 화면이 나옵니다.
+
+hekate 메뉴에서는 **CFW (emuMMC)**, **CFW (sysMMC)**, **Stock (sysMMC)**을 직접 고를 수 있습니다. sysMMC로 CFW를 쓰면 밴 위험이 큽니다.
 
 미패치 여부는 시리얼로 확인하세요 (ismyswitchpatched.com).
 
@@ -38,6 +46,13 @@ nyaa-aio 앱에서 **X (Boot splash)**를 누르면 프리셋을 고를 수 있�
 | nyaa mono | 검은 배경 + 회색 고양이 |
 | Atmosphere (original) | Atmosphère 원래 로고 |
 
+프리셋을 바꾸면 hekate 부팅 로고와 Atmosphère 스플래시가 함께 바뀝니다. Atmosphere (original)을 고르면 hekate 로고도 기본값으로 돌아갑니다.
 고른 프리셋은 팩을 업데이트해도 유지됩니다. 설치가 끝나면 자동으로 다시 적용합니다.
+
+## 업데이트할 때 파일 정리
+
+팩에는 들어 있는 파일 목록(`nyaa-aio.files.txt`)이 함께 들어 있습니다. 업데이트하면 이전 팩에만 있던 파일, 예를 들어 빠진 sysmodule은 자동으로 지워집니다.
+emuMMC, `Nintendo/` 폴더, 사용자 설정, 그리고 팩과 상관없이 직접 넣은 파일은 건드리지 않습니다.
+`hekate_ipl.ini`는 사용자 설정으로 보존합니다. 다만 예전 nyaa-aio 기본값을 한 글자도 고치지 않았다면 새 기본값으로 바꿉니다.
 
 닌텐도 서버는 DNS에서 차단되어 있지만, 업데이터가 쓰는 GitHub에는 정상적으로 접속됩니다.
