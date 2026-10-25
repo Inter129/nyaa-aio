@@ -17,9 +17,12 @@ macOS 는 서명되지 않은 앱이라 처음 한 번은 Finder 에서 우클�
 앨범으로 여는 홈브류는 메모리가 적은 애플릿 모드라 일부 앱(테마 설치기 등)이 제대로 돌지 않습니다.
 홈 화면에 "홈브류 메뉴" 아이콘을 설치해 두면 항상 앱 모드로 열 수 있습니다.
 
-1. 앨범 → DBI 를 엽니다.
-2. SD 카드 탐색 → `switch/nyaa-aio/nsp/HBMenu_[05A4999443B90000].nsp` 를 골라 설치합니다.
+1. 앨범 → sphaira 를 엽니다.
+2. 파일 탐색 → `switch/nyaa-aio/nsp/HBMenu_[05A4999443B90000].nsp` 를 골라 설치합니다.
 3. 홈 화면에 생긴 아이콘을 열면 앱 모드 홈브류 메뉴가 뜹니다 (설정은 팩이 `atmosphere/config/override_config.ini` 에 넣어 둠).
+
+게임 설치(sphaira·Goldleaf)에는 본체 키(`switch/prod.keys`)가 필요합니다. 처음 한 번 hekate → 페이로드 →
+`Lockpick_RCM.bin` → Dump from SysNAND 로 만드세요. 키는 본체마다 달라 팩에 들어 있지 않습니다.
 
 ## 구성
 
@@ -27,13 +30,13 @@ macOS 는 서명되지 않은 앱이라 처음 한 번은 Finder 에서 우클�
 - 시스모듈: sys-patch, sys-con(유선 서드파티 패드), MissionControl(블루투스로 PS/Xbox 등 패드)
 - 오버레이 메뉴 Ultrahand(ZL+ZR+방향키 아래): EdiZon(치트), ovl-sysmodules(시스모듈 켜기/끄기), sys-patch
 - 페이로드(hekate → 페이로드): TegraExplorer(파일 탐색·스크립트), Lockpick_RCM(본체 키 추출)
-- 앱: nyaa-aio 업데이터, NXThemes Installer KO(홈 메뉴 테마, 한국어판), sphaira(설치 관리자·홈브류 스토어, FTP·MTP·USB 설치, 한국어), DBI(설치 관리자, 러시아어판), JKSV(세이브 백업), NX-Activity-Log
+- 앱: nyaa-aio 업데이터, NXThemes Installer KO(홈 메뉴 테마, 한국어판), sphaira(설치 관리자·홈브류 스토어, FTP·MTP·USB 설치, 한국어), Goldleaf(파일 탐색·NSP 설치·게임/티켓 관리, 한국어), JKSV(세이브 백업), NX-Activity-Log
 
 ### 한국어
 
-- 한국어: nyaa-aio 업데이터·PC 설치 프로그램, hekate 메뉴(Nyx, 메인 화면), 테마 설치기, sphaira, Ultrahand 메뉴, EdiZon·ovl-sysmodules 오버레이(nyaa-aio 번역 포함),
+- 한국어: nyaa-aio 업데이터·PC 설치 프로그램, hekate 메뉴(Nyx, 메인 화면), 테마 설치기, sphaira, Goldleaf, Ultrahand 메뉴, EdiZon·ovl-sysmodules 오버레이(nyaa-aio 번역 포함),
   JKSV·NX-Activity-Log·홈브류 메뉴(스위치 언어가 한국어일 때)
-- 영어만 지원: hekate 의 세부 도구 화면, sys-patch 오버레이, sys-con 앱 (DBI 는 러시아어)
+- 영어만 지원: hekate 의 세부 도구 화면, sys-patch 오버레이, sys-con 앱
 - 예전에 Ultrahand 를 이미 실행했다면 언어가 영어로 저장돼 있을 수 있습니다. Ultrahand 설정 → Language 에서 한국어를 고르세요.
 
 `config/` 아래 설정(sys-con, MissionControl 등)은 업데이트해도 보존됩니다.
