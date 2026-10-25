@@ -8,7 +8,22 @@ Nintendo Switch CFW AIO 팩입니다. 구형(Erista), 개선판(Mariko), OLED, L
 2. SD 카드(FAT32 권장) 루트에 압축을 풉니다.
 3. 기종에 맞게 부팅합니다: [docs/models.md](docs/models.md)
 
-포함된 구성요소와 버전은 각 릴리스 노트와 `nyaa-aio.lock.json`에 나와 있습니다.
+## 구성
+
+- CFW·부트로더: Atmosphère, hekate (VOL- 를 누른 채 부팅하면 hekate 메뉴)
+- 시스모듈: sys-patch, sys-con(유선 서드파티 패드), MissionControl(블루투스로 PS/Xbox 등 패드)
+- Tesla 오버레이(L+방향키 아래+R3): Tesla Menu, EdiZon(치트), ovl-sysmodules(시스모듈 켜기/끄기)
+- 앱: nyaa-aio 업데이터, JKSV(세이브 백업), NX-Activity-Log
+
+`config/` 아래 설정(sys-con, MissionControl 등)은 업데이트해도 보존됩니다.
+MissionControl 은 Atmosphère 버전에 민감합니다. 업데이트 후 부팅이 멈추면 SD 의
+`atmosphere/contents/010000000000bd00/flags/boot2.flag` 를 지우고 부팅한 뒤 MissionControl 업데이트를 기다리세요.
+
+## 버전
+
+릴리스는 `vYYYY.MM.DD`(같은 날 두 번째부터 `.2`) 형식이며, 구성요소나 팩 설정이 바뀐 날에만 나옵니다.
+릴리스 노트에 직전 릴리스 대비 바뀐 구성요소가 적혀 있고, 전체 버전은 `nyaa-aio.lock.json`에 있습니다.
+
 모든 구성요소는 원 저작자의 공식 GitHub 릴리스에서 받은 것이며, 키·펌웨어·게임 파일은 포함하지 않습니다.
 
 이 저장소는 릴리스 배포 전용입니다.
