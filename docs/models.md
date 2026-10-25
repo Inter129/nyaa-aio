@@ -14,3 +14,16 @@ SD 구성은 모든 기종이 같습니다. `nyaa-aio.zip`을 FAT32(또는 exFAT
 hekate가 뜨면 **Launch → CFW (emuMMC)** 를 고르세요. sysMMC CFW 사용은 밴 위험이 큽니다.
 
 미패치 여부는 시리얼로 확인하세요 (ismyswitchpatched.com).
+
+## 스위치에서 업데이트하기
+
+팩에는 업데이터 앱 `switch/nyaa-aio/nyaa-aio.nro`가 들어 있습니다.
+
+1. CFW로 부팅한 뒤 앨범(hbmenu)에서 **nyaa-aio**를 실행합니다.
+   타이틀 오버라이드(게임을 R 버튼을 누른 채 실행)로 띄우는 것을 권장합니다. 앨범 애플릿 모드는 메모리가 부족할 수 있습니다.
+2. 최신 팩을 받아 설치합니다. emuMMC, `Nintendo/` 폴더, 사용자 설정(`hekate_ipl.ini` 등)은 건드리지 않습니다.
+3. **A**를 눌러 재부팅합니다.
+   - 미패치 Erista: Atmosphère가 `reboot_payload.bin`(hekate)으로 재부팅합니다.
+   - 모드칩 기기: 모드칩이 `payload.bin`(hekate)으로 부팅합니다.
+
+닌텐도 서버는 DNS에서 차단되어 있지만, 업데이터가 쓰는 GitHub에는 정상적으로 접속됩니다.
