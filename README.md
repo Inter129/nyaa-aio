@@ -1,6 +1,10 @@
 # nyaa-aio
 
+<p align="center"><img src="docs/images/splash.png" alt="nyaa-aio 부팅 화면" width="720"></p>
+
 Nintendo Switch CFW AIO 팩입니다. 구형(Erista), 개선판(Mariko), OLED, Lite를 지원합니다.
+
+부팅 화면과 hekate 로고에는 커미션으로 받은 고양이 그림이 기본으로 들어갑니다. 다른 스플래시는 nyaa-aio 앱에서 고를 수 있습니다.
 
 ## 설치
 
