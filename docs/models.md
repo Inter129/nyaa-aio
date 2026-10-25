@@ -26,4 +26,18 @@ hekate가 뜨면 **Launch → CFW (emuMMC)** 를 고르세요. sysMMC CFW 사용
    - 미패치 Erista: Atmosphère가 `reboot_payload.bin`(hekate)으로 재부팅합니다.
    - 모드칩 기기: 모드칩이 `payload.bin`(hekate)으로 부팅합니다.
 
+## 부팅 스플래시 바꾸기
+
+Atmosphère 부팅 화면은 기본으로 **nyaa dark**가 적용되어 있습니다.
+nyaa-aio 앱에서 **X (Boot splash)**를 누르면 프리셋을 고를 수 있고, 다음 부팅부터 반영됩니다.
+
+| 프리셋 | 설명 |
+|---|---|
+| nyaa dark | 어두운 배경 + 분홍 고양이 (기본값) |
+| nyaa pink | 분홍 배경 + 흰 고양이 |
+| nyaa mono | 검은 배경 + 회색 고양이 |
+| Atmosphere (original) | Atmosphère 원래 로고 |
+
+고른 프리셋은 팩을 업데이트해도 유지됩니다. 설치가 끝나면 자동으로 다시 적용합니다.
+
 닌텐도 서버는 DNS에서 차단되어 있지만, 업데이터가 쓰는 GitHub에는 정상적으로 접속됩니다.
