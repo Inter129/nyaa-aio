@@ -12,6 +12,15 @@ PC 설치 프로그램을 쓰면 SD 카드를 고르고 버튼 하나로 최신 
 릴리스에서 Windows `nyaa-aio-windows-x64.zip`, macOS `nyaa-aio-macos-universal.zip`, Linux `nyaa-aio-linux-x64.tar.gz` 를 받으세요.
 macOS 는 서명되지 않은 앱이라 처음 한 번은 Finder 에서 우클릭 → 열기 를 눌러야 합니다.
 
+### 홈브류를 앱 모드로 (권장)
+
+앨범으로 여는 홈브류는 메모리가 적은 애플릿 모드라 일부 앱(테마 설치기 등)이 제대로 돌지 않습니다.
+홈 화면에 "홈브류 메뉴" 아이콘을 설치해 두면 항상 앱 모드로 열 수 있습니다.
+
+1. 앨범 → DBI 를 엽니다.
+2. SD 카드 탐색 → `switch/nyaa-aio/nsp/HBMenu_[05A4999443B90000].nsp` 를 골라 설치합니다.
+3. 홈 화면에 생긴 아이콘을 열면 앱 모드 홈브류 메뉴가 뜹니다 (설정은 팩이 `atmosphere/config/override_config.ini` 에 넣어 둠).
+
 ## 구성
 
 - CFW·부트로더: Atmosphère, hekate (VOL- 를 누른 채 부팅하면 hekate 메뉴)
