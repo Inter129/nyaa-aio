@@ -6,6 +6,20 @@ Nintendo Switch CFW AIO 팩입니다. 구형(Erista), 개선판(Mariko), OLED, L
 
 부팅 화면과 hekate 로고에는 커미션으로 받은 고양이 그림이 기본으로 들어갑니다. 다른 스플래시는 nyaa-aio 앱에서 고를 수 있습니다.
 
+## 부팅할 때
+
+1. **hekate 로고** (고양이, 3초): 이때 **VOL-** 를 누르면 hekate 메뉴로 갑니다.
+2. **본체 키가 없으면** (`switch/prod.keys`) 한 번만 Lockpick 이 자동으로 뜹니다. 고를 것 없이 sysNAND 에서 키를 꺼내 저장하고
+   hekate 로 돌아갑니다. 고급 기능(emuNAND·Amiibo 등)은 Lockpick 을 VOL- 를 누른 채 실행하면 원래 메뉴가 나옵니다.
+3. **emuMMC 가 없으면** 본체 낸드(sysMMC)로 CFW 를 켜기 전에 묻습니다.
+   VOL- hekate 메뉴(emuMMC 만들기) · VOL+ 이번만 sysMMC · POWER sysMMC 로 켜고 다시 묻지 않기
+   (다시 묻게 하려면 `bootloader/sys/nyaa_sysmmc_ok` 를 지우세요). ini 에서 직접 고른 항목·hekate 메뉴에서 고른 부팅은 묻지 않습니다.
+4. **Atmosphère 로고 대신 고양이** (2초): Atmosphère 의 boot 모듈을 같은 버전으로 다시 빌드해 로고만 바꿨습니다.
+   이상하면 `atmosphere/kips/nyaa` 폴더를 지우면 원래대로 돌아갑니다.
+
+부팅 화면은 nyaa-aio 앱에서 X(부팅 화면)를 눌러 **nyaa 고양이 / nyaa 고양이 (다크) / Atmosphère 원본** 중에 고릅니다.
+"Atmosphère 원본" 을 고르면 4번의 고양이 로고도 꺼집니다. 화면에는 그 릴리스의 버전이 함께 적힙니다.
+
 ## 설치
 
 1. [최신 릴리스](../../releases/latest)에서 `nyaa-aio.zip`을 받습니다.
@@ -26,22 +40,23 @@ macOS 는 서명되지 않은 앱이라 처음 한 번은 Finder 에서 우클�
 2. 파일 탐색 → `switch/nyaa-aio/nsp/HBMenu_[05A4999443B90000].nsp` 를 골라 설치합니다.
 3. 홈 화면에 생긴 아이콘을 열면 앱 모드 홈브류 메뉴가 뜹니다 (설정은 팩이 `atmosphere/config/override_config.ini` 에 넣어 둠).
 
-게임 설치(sphaira·Goldleaf)에는 본체 키(`switch/prod.keys`)가 필요합니다. 처음 한 번 hekate → 페이로드 →
-`Lockpick_RCM.bin` → Dump from SysNAND 로 만드세요. 키는 본체마다 달라 팩에 들어 있지 않습니다.
+게임 설치(sphaira·Goldleaf)에는 본체 키(`switch/prod.keys`)가 필요합니다. 키가 없으면 부팅할 때 Lockpick 이 자동으로 떠서
+만들어 줍니다 (위 "부팅할 때" 2번). 키는 본체마다 달라 팩에 들어 있지 않으니 다른 사람과 나누지 마세요.
 
 ## 구성
 
 - CFW·부트로더: Atmosphère, hekate (VOL- 를 누른 채 부팅하면 hekate 메뉴)
 - 시스모듈: sys-patch, sys-con(유선 서드파티 패드), MissionControl(블루투스로 PS/Xbox 등 패드)
 - 오버레이 메뉴 Ultrahand(ZL+ZR+방향키 아래): EdiZon(치트), ovl-sysmodules(시스모듈 켜기/끄기), sys-patch
-- 페이로드(hekate → 페이로드): TegraExplorer(파일 탐색·스크립트), Lockpick_RCM(본체 키 추출)
+- 페이로드(hekate → 페이로드): TegraExplorer(파일 탐색·스크립트), Lockpick_RCM(본체 키 추출, 자동 모드판)
 - 앱: nyaa-aio 업데이터, NXThemes Installer KO(홈 메뉴 테마, 한국어판), sphaira(설치 관리자·홈브류 스토어, FTP·MTP·USB 설치, 한국어), Goldleaf(파일 탐색·NSP 설치·게임/티켓 관리, 한국어), JKSV(세이브 백업), NX-Activity-Log
 
 ### 한국어
 
-- 한국어: nyaa-aio 업데이터·PC 설치 프로그램, hekate 메뉴(Nyx, 메인 화면), 테마 설치기, sphaira, Goldleaf, Ultrahand 메뉴, EdiZon·ovl-sysmodules 오버레이(nyaa-aio 번역 포함),
+- 한국어: nyaa-aio 업데이터·PC 설치 프로그램, hekate 메뉴(Nyx: 메인·도구·본체 정보·eMMC/emuMMC·파티션 관리자), Lockpick 화면,
+  sysMMC 확인 화면, 테마 설치기, sphaira, Goldleaf, Ultrahand 메뉴, EdiZon·ovl-sysmodules 오버레이(nyaa-aio 번역 포함),
   JKSV·NX-Activity-Log·홈브류 메뉴(스위치 언어가 한국어일 때)
-- 영어만 지원: hekate 의 세부 도구 화면, sys-patch 오버레이, sys-con 앱
+- 영어만 지원: hekate 의 레지스터·파일 이름 같은 기술 항목, Lockpick 고급 메뉴, sys-patch 오버레이, sys-con 앱
 - 예전에 Ultrahand 를 이미 실행했다면 언어가 영어로 저장돼 있을 수 있습니다. Ultrahand 설정 → Language 에서 한국어를 고르세요.
 
 `config/` 아래 설정(sys-con, MissionControl 등)은 업데이트해도 보존됩니다.
@@ -51,8 +66,11 @@ MissionControl 은 Atmosphère 버전에 민감합니다. 업데이트 후 부�
 ## 버전
 
 릴리스는 `vYYYY.MM.DD`(같은 날 두 번째부터 `.2`) 형식이며, 구성요소나 팩 설정이 바뀐 날에만 나옵니다.
-릴리스 노트에 직전 릴리스 대비 바뀐 구성요소가 적혀 있고, 전체 버전은 `nyaa-aio.lock.json`에 있습니다.
+릴리스 노트에 직전 릴리스 대비 바뀐 구성요소와 팩 변경 사항이 적혀 있고, 전체 버전은 `nyaa-aio.lock.json`에 있습니다.
 
 모든 구성요소는 원 저작자의 공식 GitHub 릴리스에서 받은 것이며, 키·펌웨어·게임 파일은 포함하지 않습니다.
+다음은 nyaa-aio 가 고쳐서 빌드한 GPLv2 프로그램이고, 소스를 릴리스마다 함께 올립니다:
+hekate Nyx 한국어판(`hekate-ko-source.tar.gz`), 테마 설치기 한국어판(`nxthemes-ko-source.tar.gz`),
+Lockpick_RCM 자동 모드판(`lockpick-nyaa-source.tar.gz`), Atmosphère boot 고양이 로고판(`amsboot-source.tar.gz`).
 
 이 저장소는 릴리스 배포 전용입니다.
