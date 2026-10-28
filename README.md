@@ -71,10 +71,11 @@ nyaa-aio 앱에서 **Y(오류 보고서)**, 또는 PC 앱의 **오류 보고서*
 - CFW·부트로더: Atmosphère, hekate (VOL- 를 누른 채 부팅하면 hekate 메뉴)
 - 시스모듈 (켜진 채로): sys-patch, sys-con(유선 서드파티 패드), MissionControl(블루투스로 PS/Xbox 등 패드)
 - 시스모듈 (꺼진 채로 — 필요한 것만 nyaa-aio 앱의 L 또는 ovl-sysmodules 에서 켜기):
-  sys-clk(클럭 조절), SaltyNX(FPSLocker·ReverseNX·FPS 표시에 필요), SysDVR(화면·소리를 PC/폰으로), emuiibo(아미보), ldn_mitm(LAN 플레이), sys-tune(음악)
+  sys-clk(클럭 조절), SaltyNX(FPSLocker·ReverseNX·FPS 표시에 필요), SysDVR(화면·소리를 PC/폰으로), emuiibo(아미보), sys-tune(음악)
   - 한꺼번에 많이 켜면 메모리가 모자라 부팅 중에 멈출 수 있어서 꺼 두었습니다.
+  - LAN 플레이(ldn_mitm)는 지금 Atmosphère 1.12.1·펌웨어 23.0.1 에서 켜면 오류 화면이 떠서 뺐습니다. 지원 버전이 나오면 다시 넣습니다.
 - 오버레이 메뉴 Ultrahand(ZL+ZR+방향키 아래): EdiZon(치트), ovl-sysmodules(시스모듈 켜기/끄기), sys-patch,
-  sys-clk, Status Monitor(FPS·클럭·온도), FPSLocker(FPS 고정), ReverseNX-RT(독/휴대 모드), QuickNTP(시계 맞추기), emuiibo, ldn_mitm, sys-tune
+  sys-clk, Status Monitor(FPS·클럭·온도), FPSLocker(FPS 고정), ReverseNX-RT(독/휴대 모드), QuickNTP(시계 맞추기), emuiibo, sys-tune
 - 페이로드(hekate → 페이로드): TegraExplorer(파일 탐색·스크립트), Lockpick_RCM(본체 키 추출, 자동 모드판)
 - 앱: nyaa-aio 업데이터, NXThemes Installer KO(홈 메뉴 테마, 한국어판), sphaira(설치 관리자·홈브류 스토어, FTP·MTP·USB 설치, 한국어), Goldleaf(파일 탐색·NSP 설치·게임/티켓 관리, 한국어), JKSV(세이브 백업), NX-Activity-Log,
   SimpleModManager(게임 모드 켜기/끄기), Moonlight(PC 게임 스트리밍), sys-clk 관리자, SysDVR 설정
