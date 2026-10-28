@@ -57,11 +57,20 @@ Atmosphère 오류 화면이 뜨거나 앱·게임이 멈추면 SD 의 `atmosphe
 nyaa-aio 앱에서 **Y(오류 보고서)**, 또는 PC 앱의 **오류 보고서** 버튼을 누르면 무엇이 멈췄는지(추가 모듈·Atmosphère·게임 등)와
 해볼 일을 한국어로 알려 줍니다. 추가 모듈이 원인이면 그 자리에서 끌 수 있습니다.
 
+## 모듈·클럭 (nyaa-aio 앱)
+
+- **L(모듈 켜기/끄기)**: 들어 있는 시스모듈을 한국어 설명과 함께 보여 주고 A 로 켜고 끕니다.
+  재부팅이 필요 없는 모듈은 바로 켜지고 꺼집니다. 많이 켤수록 메모리가 모자라 부팅 중에 멈출 수 있으니 필요한 것만 켜세요.
+- **R(클럭 조절)**: sys-clk 로 게임마다 클럭을 정합니다. **기본 · 배터리 절약 · 부드럽게 · 최대** 중에 고르거나,
+  독 모드 / 휴대 모드 / 휴대·충전 중 마다 CPU·GPU·메모리를 직접 고릅니다. 설정은 `config/sys-clk/config.ini` 에 저장되고 업데이트해도 남습니다.
+  - sys-clk 가 꺼져 있으면 그 화면에서 Y 로 켤 수 있습니다.
+  - 휴대 모드 GPU 는 sys-clk 가 안전 한도(460MHz, Mariko 614MHz, USB 충전 중 768MHz)로 제한합니다. 최대는 발열·배터리 소모가 큽니다.
+
 ## 구성
 
 - CFW·부트로더: Atmosphère, hekate (VOL- 를 누른 채 부팅하면 hekate 메뉴)
 - 시스모듈 (켜진 채로): sys-patch, sys-con(유선 서드파티 패드), MissionControl(블루투스로 PS/Xbox 등 패드)
-- 시스모듈 (꺼진 채로 — 필요한 것만 ovl-sysmodules 에서 켜기):
+- 시스모듈 (꺼진 채로 — 필요한 것만 nyaa-aio 앱의 L 또는 ovl-sysmodules 에서 켜기):
   sys-clk(클럭 조절), SaltyNX(FPSLocker·ReverseNX·FPS 표시에 필요), SysDVR(화면·소리를 PC/폰으로), emuiibo(아미보), ldn_mitm(LAN 플레이), sys-tune(음악)
   - 한꺼번에 많이 켜면 메모리가 모자라 부팅 중에 멈출 수 있어서 꺼 두었습니다.
 - 오버레이 메뉴 Ultrahand(ZL+ZR+방향키 아래): EdiZon(치트), ovl-sysmodules(시스모듈 켜기/끄기), sys-patch,
