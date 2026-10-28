@@ -26,8 +26,9 @@ Nintendo Switch CFW AIO 팩입니다. 구형(Erista), 개선판(Mariko), OLED, L
 2. SD 카드(FAT32 권장) 루트에 압축을 풉니다.
 3. 기종에 맞게 부팅합니다: [docs/models.md](docs/models.md)
 
-PC 설치 프로그램을 쓰면 SD 카드를 고르고 버튼 하나로 최신 팩을 설치할 수 있습니다 (설정·emuMMC 보존).
-새 카드나 exFAT 카드는 같은 프로그램의 **FAT32 포맷…** 버튼으로 FAT32 로 만들 수 있습니다 (32GB 넘는 카드도 됨, 카드 전체가 지워짐). hekate 파티션 관리자와 같은 배치(16MB 정렬, 64KB 클러스터)로 만듭니다. Windows 는 관리자 권한(UAC), macOS 는 관리자 암호, Linux 는 pkexec 로 권한을 묻습니다.
+PC 설치 프로그램을 쓰면 **처음 설치 마법사**가 SD 카드 → 포맷 → 기종 → 설치 → 첫 부팅 안내 순서로 데려다 줍니다 (설정·emuMMC 보존).
+카드에 emuMMC 나 게임·세이브가 있으면 포맷하지 말라고 알려 줍니다. 업데이트·오류 보고서 등은 **고급 화면**에 있습니다.
+새 카드나 exFAT 카드는 마법사의 포맷 단계(또는 고급 화면의 **FAT32 포맷…** 버튼)로 FAT32 로 만들 수 있습니다 (32GB 넘는 카드도 됨, 카드 전체가 지워짐). hekate 파티션 관리자와 같은 배치(16MB 정렬, 64KB 클러스터)로 만듭니다. Windows 는 관리자 권한(UAC), macOS 는 관리자 암호, Linux 는 pkexec 로 권한을 묻습니다.
 릴리스에서 Windows `nyaa-aio-windows-x64.zip`, macOS `nyaa-aio-macos-universal.zip`, Linux `nyaa-aio-linux-x64.tar.gz` 를 받으세요.
 macOS 는 서명되지 않은 앱이라 처음 한 번은 Finder 에서 우클릭 → 열기 를 눌러야 합니다.
 
